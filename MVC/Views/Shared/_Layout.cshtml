@@ -1,0 +1,47 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h4 id="Logo"> <a href="../Hedgehog">ზღრაბი</a></h4>
+        <h4 id="Guide"> SC=Spike Count | R=Radius(cm)</h4>
+        <ul id="nav">
+            <li><a href="../Hedgehog/Create">Create</a></li>
+            <li><a href="../Hedgehog/UpdateMenu">Update</a></li>
+            <li><a href="../Hedgehog/DeleteMenu">Delete</a></li>
+        </ul>
+    </header>
+    <section class="sliderWrapper">
+
+        <div id="sliderTextWrapper">
+
+            <h2 class="SliderText">ზღრაბი</h2>
+            <div id="line"></div>
+            <h2 class="SliderText">@ViewBag.Phrase </h2>
+        </div>
+
+    </section>
+
+    <div class="container">
+        <div class="row">
+
+            
+                @RenderBody()
+            
+        </div>
+    </div>
+
+    <section class="sliderWrapper" id="DefaultFooter">
+        <footer>
+            <p>Lasha Pukhashvili &copy 2023 TSU</p>
+        </footer>
+    </section>
+</body>
+</html>

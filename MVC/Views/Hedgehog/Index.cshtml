@@ -1,0 +1,25 @@
+﻿@using Hedgehogs.MVC.ViewModels
+@model HedgehogListViewModel
+
+
+<div class="col-md-11">
+    @foreach (var h in Model.Hedgehogs)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="@h.PictureUrl" alt="hedgehog pic">
+                <div class="caption">
+                    <h4 class="pull-left">ID: @h.Id</h4>
+                    <h4 class="pull-right">R: @h.Radius</h4>
+                    <h4 class="pull-left">SC: @h.SpikeCount</h4>
+                    <h3>
+                        @h.Name
+                    </h3>
+
+                    <p>@h.Description</p>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

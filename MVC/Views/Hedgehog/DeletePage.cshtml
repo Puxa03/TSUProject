@@ -1,0 +1,11 @@
+﻿@model int
+<div class="col-md-5">
+    @using (Html.BeginForm("Delete", "Hedgehog", FormMethod.Post))
+    {
+
+        <h2 class="form-signin-heading">Are You Sure You Wanna Kill Hedgehog With ID: @ViewBag.Id</h2>
+        @Html.Hidden("id", null, new { @class = "form-control", placeholder = "Hedgehog ID", required = "" ,value=ViewBag.Id})
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Yes</button>
+
+    }
+</div>

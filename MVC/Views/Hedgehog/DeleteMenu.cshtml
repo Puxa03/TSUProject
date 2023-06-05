@@ -1,0 +1,19 @@
+﻿@model Int32
+
+<div class="col-md-5">
+    @using (Html.BeginForm("DeletePage", "Hedgehog", FormMethod.Post))
+    {
+
+        <h2 class="form-signin-heading">Kill A Hedgehog</h2>
+
+
+
+        @Html.TextBox("id",null, new { @class = "form-control", placeholder = "Hedgehog ID", required = "", type = "number" ,min = "1" })
+
+        
+
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+
+    }
+</div>
